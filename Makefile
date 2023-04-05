@@ -44,7 +44,7 @@ build-release: bin/webdav-server
 .PHONY: image
 image: build-release Dockerfile
 	rm -rf .tmp/docker-dirs
-	mkdir -p .tmp/docker-dirs/{conf,content}
+	mkdir -p .tmp/docker-dirs/root/conf .tmp/docker-dirs/user/content
 	DOCKER_BUILDKIT=1 \
 	docker build . -t "${REGISTRY}/webdav-server-${DOCKER_ARCH}:${VERSION}" \
 	--platform "linux/${DOCKER_ARCH}"
