@@ -1,5 +1,6 @@
 /.idea
 /bin
+/.tmp
 /sandbox
 ._*
 .DS_Store
