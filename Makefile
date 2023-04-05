@@ -4,7 +4,7 @@ BASE_DIR := $(dir $(abspath $(lastword $(MAKEFILE_LIST))))
 all:
 	$(MAKE) -C $(dir (BASE_DIR)) build
 
-.PHOHNY: build
+.PHONY: build
 build: bin/webdav-server
 
 .PHONY: clean
